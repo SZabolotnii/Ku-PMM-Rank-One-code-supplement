@@ -1,0 +1,12 @@
+{
+  "generated_at_utc": "2026-09-24T10:23:34.462776+00:00",
+  "script": "scripts/k1_rank_contrast.py",
+  "n": 2000,
+  "reps": 10000,
+  "seeds": [
+    20260924,
+    7
+  ],
+  "model": "y = X theta + eps, no intercept, X ~ U(0,2)^2, eps = Exp(1) - 1, basis e^j j=1..3",
+  "claim": "stacked separable conditions keep the penalty rank one; mixed instruments break rank one and make the excess indefinite"
+}

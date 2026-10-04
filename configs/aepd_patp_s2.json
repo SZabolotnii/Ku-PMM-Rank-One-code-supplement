@@ -1,0 +1,16 @@
+{
+  "study_id": "aepd_patp_s2_asymmetric",
+  "order": 2,
+  "description": "Centered Form-B PATP S=2 under standardized asymmetric AEPD noise",
+  "scenarios": [
+    {"id": "A0", "tau": 0.50, "p_left": 2.0, "p_right": 2.0, "role": "Gaussian neutrality"},
+    {"id": "A1L", "tau": 0.30, "p_left": 2.0, "p_right": 2.0, "role": "left-mass asymmetry"},
+    {"id": "A1R", "tau": 0.70, "p_left": 2.0, "p_right": 2.0, "role": "right-mass mirror"},
+    {"id": "A2L", "tau": 0.50, "p_left": 1.2, "p_right": 3.0, "role": "left-tail asymmetry"},
+    {"id": "A2R", "tau": 0.50, "p_left": 3.0, "p_right": 1.2, "role": "right-tail mirror"},
+    {"id": "A3L", "tau": 0.30, "p_left": 1.2, "p_right": 3.0, "role": "combined left asymmetry"},
+    {"id": "A3R", "tau": 0.70, "p_left": 3.0, "p_right": 1.2, "role": "combined right mirror"},
+    {"id": "A4L", "tau": 0.30, "p_left": 0.8, "p_right": 3.0, "role": "left MLE-boundary stress"},
+    {"id": "A4R", "tau": 0.70, "p_left": 3.0, "p_right": 0.8, "role": "right MLE-boundary mirror"}
+  ]
+}

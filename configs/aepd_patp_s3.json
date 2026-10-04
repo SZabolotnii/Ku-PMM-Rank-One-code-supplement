@@ -1,0 +1,13 @@
+{
+  "study_id": "aepd_patp_s3_symmetric",
+  "order": 3,
+  "description": "Canonical Form-B PATP S=3 under standardized symmetric AEPD noise",
+  "scenarios": [
+    {"id": "S075", "tau": 0.50, "p_left": 0.75, "p_right": 0.75, "role": "strong heavy-tail stress"},
+    {"id": "S100", "tau": 0.50, "p_left": 1.0, "p_right": 1.0, "role": "Laplace boundary"},
+    {"id": "S150", "tau": 0.50, "p_left": 1.5, "p_right": 1.5, "role": "moderate leptokurtic"},
+    {"id": "S200", "tau": 0.50, "p_left": 2.0, "p_right": 2.0, "role": "Gaussian neutrality"},
+    {"id": "S300", "tau": 0.50, "p_left": 3.0, "p_right": 3.0, "role": "platykurtic"},
+    {"id": "S500", "tau": 0.50, "p_left": 5.0, "p_right": 5.0, "role": "strong platykurtic"}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "generated_at_utc": "2026-09-08T16:58:38.696198+00:00",
+  "study_id": "k1_penalty_direction",
+  "source": "results/aepd_patp_s2_replications.csv (L2 publication run)",
+  "claim": "feasible/oracle variance ratio exceeds 1 only along Q^{-1}dbar; equals 1 on its complement",
+  "rows": 36
+}

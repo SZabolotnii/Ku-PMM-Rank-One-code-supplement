@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2026-09-08T16:58:28.746396+00:00",
+  "study_id": "k1_convergence_rate",
+  "source": "results/aepd_patp_s{2,3}_summary.csv",
+  "prediction_inside_ci_at_N5000": {
+    "2": [
+      9,
+      9
+    ],
+    "3": [
+      0,
+      6
+    ]
+  },
+  "oracle_inside_ci_at_N5000": {
+    "2": [
+      8,
+      9
+    ],
+    "3": [
+      1,
+      6
+    ]
+  },
+  "rows": 60
+}

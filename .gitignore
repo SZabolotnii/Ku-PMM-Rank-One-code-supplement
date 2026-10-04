@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+# replication-level Monte Carlo output (145 MB and 89 MB); regenerate with scripts/run_mc_aepd_patp_s{2,3}.py
+results/*_replications.csv

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. A citation for the article will be added on publication."
+title: "Ku-PMM-Rank-One code supplement: rank-one variance inflation in polynomial estimation of signal parameters with a sign-preserving fractional-power basis"
+authors:
+  - family-names: Zabolotnii
+    given-names: Serhii
+type: software
+license: MIT
+repository-code: "https://github.com/SZabolotnii/Ku-PMM-Rank-One-code-supplement"
+date-released: 2026-10-04

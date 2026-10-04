@@ -1,0 +1,14 @@
+{
+  "generated_at_utc": "2026-09-27T06:36:53.414030+00:00",
+  "study_id": "k1_constant_signal_check",
+  "script": "scripts/k1_constant_signal_check.py",
+  "claim": "for a constant signal the feasible gain is lost exactly when the centring means are estimated from the same residuals, for any S; it survives when they are imposed a priori",
+  "replications": 20000,
+  "sample_sizes": [
+    200,
+    1000,
+    5000
+  ],
+  "seed": 20260927,
+  "resampling_unit": "iid Monte Carlo replicate"
+}

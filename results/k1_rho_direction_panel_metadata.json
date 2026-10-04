@@ -1,0 +1,28 @@
+{
+  "generated_at_utc": "2026-09-24T10:24:12.272800+00:00",
+  "script": "scripts/k1_rho_direction_panel.py",
+  "manifest": "configs/aepd_patp_s2.json",
+  "rho_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "reps": 1000,
+  "sample_sizes": "5000",
+  "seed": 20260924,
+  "bootstrap": 1000,
+  "scenarios": [
+    "A2L",
+    "A2R",
+    "A4L",
+    "A4R"
+  ],
+  "claim": "for every fixed rho the feasible/oracle variance ratio exceeds 1 only along Q^{-1}dbar"
+}

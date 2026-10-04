@@ -1,0 +1,64 @@
+{
+  "generated_at_utc": "2026-09-27T06:13:50.314627+00:00",
+  "study_id": "k1_signal_classes_RD",
+  "script": "scripts/k1_signal_classes_RD.py",
+  "claim": "Q^{-1} dbar is the projection of the constant onto the gradient span; R_D is a design quantity for every smooth signal class",
+  "monte_carlo": false,
+  "window": [
+    0.01,
+    2.0
+  ],
+  "sizes": [
+    200,
+    1000,
+    5000
+  ],
+  "signal_classes": {
+    "harmonic_envelope": {
+      "A": 2.0,
+      "Omega": 1.5,
+      "Phi": 0.5
+    },
+    "harmonic_envelope_offset": {
+      "A": 2.0,
+      "Omega": 1.5,
+      "Phi": 0.5,
+      "C": 0.5
+    },
+    "two_tone": {
+      "A1": 2.0,
+      "Omega1": 1.5,
+      "Phi1": 0.5,
+      "A2": 1.0,
+      "Omega2": 4.0,
+      "Phi2": 1.0
+    },
+    "damped_sinusoid": {
+      "A": 2.0,
+      "lambda": 0.5,
+      "Omega": 1.5,
+      "Phi": 0.5
+    },
+    "linear_chirp": {
+      "A": 2.0,
+      "Omega": 1.5,
+      "beta": 1.0,
+      "Phi": 0.5
+    },
+    "gaussian_pulse": {
+      "A": 2.0,
+      "tau": 1.0,
+      "w": 0.3
+    },
+    "linear_no_intercept": {
+      "theta1": 1.0,
+      "theta2": 0.5
+    },
+    "constant": {
+      "C": 0.5
+    }
+  },
+  "cells": 360,
+  "max_identity_gap": 1.0269562977782698e-14,
+  "max_lstsq_gap": 3.29625216011209e-13
+}

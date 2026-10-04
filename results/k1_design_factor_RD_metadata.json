@@ -1,0 +1,14 @@
+{
+  "generated_at_utc": "2026-09-08T16:58:18.231879+00:00",
+  "study_id": "k1_design_factor_RD",
+  "claim": "penalty_g/(1-oracle_g) equals R_D for every noise law; R_D changes only with the design",
+  "designs": 7,
+  "sizes": [
+    200,
+    1000,
+    5000
+  ],
+  "cells": 315,
+  "max_identity_gap": 1.9040324872321435e-14,
+  "noise_invariant_cells": 273
+}

@@ -1,0 +1,30 @@
+{
+  "script": "scripts/k1_s3_rho_sweep.py",
+  "manifest": "configs/aepd_patp_s2.json",
+  "rho_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "reps": 1000,
+  "sample_sizes": [
+    2000,
+    8000
+  ],
+  "seed": 20260924,
+  "scenarios": [
+    "A0",
+    "A2L",
+    "A2R",
+    "A4L",
+    "A4R"
+  ],
+  "note": "diagnostic sweep, not a publication run"
+}

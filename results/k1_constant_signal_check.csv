@@ -1,0 +1,7 @@
+case,order,sample_size,replications,population_g,g_estimated_centring,max_abs_step_estimated_centring,g_imposed_centring,imposed_centring_source
+S2_asymmetric_exponential,2,200,20000,0.5,1.0,0.0,0.5107206241035339,oracle variance c2 = 1
+S2_asymmetric_exponential,2,1000,20000,0.5,1.0,0.0,0.5063162652014115,oracle variance c2 = 1
+S2_asymmetric_exponential,2,5000,20000,0.5,1.0,0.0,0.5036295098247806,oracle variance c2 = 1
+S3_symmetric_uniform,3,200,20000,0.30000000000000027,1.0,0.0,0.31591753057101696,"symmetry, E eps^3 = 0"
+S3_symmetric_uniform,3,1000,20000,0.30000000000000027,1.0,0.0,0.3018710694859749,"symmetry, E eps^3 = 0"
+S3_symmetric_uniform,3,5000,20000,0.30000000000000027,1.0,0.0,0.3007659588903805,"symmetry, E eps^3 = 0"

@@ -1,0 +1,25 @@
+{
+  "generated_at_utc": "2026-09-08T16:59:33.270031+00:00",
+  "study_id": "k1_sandwich_coverage",
+  "pilot": true,
+  "reps": 200,
+  "sample_sizes": [
+    200,
+    500,
+    1000,
+    5000
+  ],
+  "scenarios": [
+    "A0",
+    "A2L",
+    "A4L",
+    "A3L"
+  ],
+  "seed": 20260908,
+  "nominal": 0.95,
+  "estimators": {
+    "closed": "(12.1) Q^-1/kappa + (c2-1/kappa) Q^-1 dbar dbar' Q^-1 with plug-in moments",
+    "empirical": "(12.2) empirical same-sample sandwich",
+    "naive": "oracle form Q^-1/kappa, ignores the centring penalty"
+  }
+}
