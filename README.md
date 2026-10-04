@@ -34,7 +34,7 @@ Two further checks, also seconds:
 
 ```sh
 python scripts/verify_k1.py                  # 12 claim-level checks over results/
-python -m unittest discover -s tests         # 26 unit and regression tests
+python -m unittest discover -s tests         # 27 unit and regression tests
 ```
 
 ## Layout

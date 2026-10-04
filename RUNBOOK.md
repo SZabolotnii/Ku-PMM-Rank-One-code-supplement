@@ -24,19 +24,19 @@ them; the actual values are recomputed from `results/`. Add `-v` to list every c
 
 ```sh
 python scripts/verify_k1.py                  # 12/12 claim-level checks
-python -m unittest discover -s tests         # 26 tests
+python -m unittest discover -s tests         # 27 tests
 ```
 
 ## Level 1b — regenerate the tables and figures (seconds)
 
 ```sh
-python scripts/make_tex_tables.py            # -> output/tables/coverage_s{2,3}.tex
+python scripts/make_tex_tables.py            # -> output/tables/coverage_s{2,3}{,_en}.tex
 python scripts/make_tex_tables.py --check    # exit 1 if output/ is stale against results/
 python scripts/make_paper_figures.py         # -> output/figures/fig_*_{uk,en}.{pdf,png}
 ```
 
-Both scripts read `results/` only and contain no typed-in numbers. The figures exist in
-a Ukrainian (`_uk`) and an English (`_en`) version.
+Both scripts read `results/` only and contain no typed-in numbers. Tables and figures exist
+in a Ukrainian version (decimal comma; figures `_uk`) and an English one (`_en`).
 
 ## Level 2 — deterministic recomputation (seconds to minutes, no Monte Carlo)
 

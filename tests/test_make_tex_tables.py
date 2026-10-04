@@ -37,6 +37,15 @@ class GeneratedTablesTests(unittest.TestCase):
             self.assertEqual(path.read_text(encoding="utf-8"), text,
                              f"{name} is stale - run scripts/make_tex_tables.py")
 
+    def test_english_tables_bold_the_same_cells(self):
+        built = tabs.build()
+        for name in tabs.TABLES:
+            uk = built[name].splitlines()
+            en = built[name.replace(".tex", "_en.tex")].splitlines()
+            self.assertEqual([line.count("mathbf") for line in uk],
+                             [line.count("mathbf") for line in en], name)
+            self.assertNotIn("{,}", "\n".join(en))
+
     def test_naive_form_never_wins_at_n5000_in_symmetric_regimes_with_increment(self):
         body = tabs.build()["coverage_s3.tex"]
         rows = [line for line in body.splitlines() if "& $5000$" in line]
