@@ -8,3 +8,12 @@ type: software
 license: MIT
 repository-code: "https://github.com/SZabolotnii/Ku-PMM-Rank-One-code-supplement"
 date-released: 2026-10-04
+references:
+  - type: article
+    title: "Rank-one variance inflation in polynomial estimation of signal parameters with a sign-preserving fractional-power basis"
+    authors:
+      - family-names: Zabolotnii
+        given-names: Serhii
+    year: 2026
+    url: "https://arxiv.org/abs/2610.05511"
+    doi: "10.48550/arXiv.2610.05511"

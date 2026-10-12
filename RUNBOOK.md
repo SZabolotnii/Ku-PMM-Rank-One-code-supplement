@@ -1,7 +1,7 @@
 # RUNBOOK
 
 Execution notes for the Ku-PMM-Rank-One verification supplement.
-Last updated: 2026-10-04.
+Last updated: 2026-10-12 (manuscript revision; stored simulation results unchanged).
 
 Three levels of checking, in increasing cost. Level 1 is enough to verify the
 manuscript; levels 2 and 3 exist so that "verify" does not have to mean "trust the
@@ -24,8 +24,19 @@ them; the actual values are recomputed from `results/`. Add `-v` to list every c
 
 ```sh
 python scripts/verify_k1.py                  # 12/12 claim-level checks
-python -m unittest discover -s tests         # 27 tests
+python -m unittest discover -s tests         # 30 tests
 ```
+
+The October 12 revision adds three deterministic checks for Corollary 8:
+
+```sh
+python -m unittest discover -s tests -p test_wald_consequence.py -v
+```
+
+Quadrature of influence-function products in a uniform-noise example checks the
+joint Wald eigenvalues, contrast coverage distortion, and invariance under a linear
+coordinate change. This does not regenerate simulation results or establish
+finite-sample coverage. The test is synchronized with the research repository.
 
 ## Level 1b — regenerate the tables and figures (seconds)
 
@@ -43,8 +54,8 @@ in a Ukrainian version (decimal comma; figures `_uk`) and an English one (`_en`)
 | Command | Writes | Manuscript element |
 |---|---|---|
 | `python scripts/build_patp_plugin_theory_artifacts.py` | `results/patp_plugin_sandwich_predictions.csv` | closed-form `g_or`, `g_fe` and the centring increment per scenario |
-| `python scripts/k1_design_only_RD.py` | `results/k1_design_factor_RD*.csv` | Table 1 (`R_D` for seven designs); the identity on 315 cells (§8.7) |
-| `python scripts/k1_signal_classes_RD.py` | `results/k1_signal_classes_RD*.csv` | Table 2 (eight signal models); the identity on 360 cells |
+| `python scripts/k1_design_only_RD.py` | `results/k1_design_factor_RD*.csv` | Table 1 (`R_D` for seven designs); 315 cells, 273 with a defined penalty-to-gain ratio (§8.7) |
+| `python scripts/k1_signal_classes_RD.py` | `results/k1_signal_classes_RD*.csv` | Table 2 (eight signal models); 360 cells, 312 with a defined penalty-to-gain ratio |
 
 ## Level 3 — Monte Carlo (minutes to hours)
 
