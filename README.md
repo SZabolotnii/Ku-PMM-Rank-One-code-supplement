@@ -4,11 +4,19 @@ Public verification supplement for the manuscript
 
 **Rank-one variance inflation in polynomial estimation of signal parameters with a
 sign-preserving fractional-power basis**
-*Serhii Zabolotnii* (manuscript in preparation)
+*Serhii Zabolotnii* — preprint: [arXiv:2610.05511](https://arxiv.org/abs/2610.05511).
+
+This supplement supports the manuscript revision of **12 October 2026**. The revision
+clarifies the contribution relative to preceding PMM--SLS plug-in theory and adds the
+limiting coverage and joint Wald-statistic consequences (Corollary 8). The stored
+simulation results and numerical values are unchanged. This statement identifies the
+local manuscript revision; it does not assert that an arXiv replacement has been published.
 
 ## The result in one line
 
-When the moment characteristics of non-Gaussian noise are estimated from the residuals
+Under the manuscript's regularity conditions, for a fixed basis shape and a smooth
+signal model in a fixed design, when the moment characteristics of non-Gaussian noise
+are estimated from the residuals
 of a preliminary least-squares fit, instead of being known, the asymptotic covariance of
 the polynomial (PMM) estimator grows by exactly one term,
 
@@ -16,7 +24,9 @@ the polynomial (PMM) estimator grows by exactly one term,
 
 a positive semi-definite matrix of rank at most one. In the trace metric this gives
 `g_fe = g_or + (1 - g_or) R_D` with `R_D = |Q^{-1} dbar|^2 / tr Q^{-1}`, a weight that
-depends on the design only.
+depends on the design only, in the specified parameter coordinates. Unlike the trace
+weight `R_D`, the projection quantity `pi = dbar' Q^{-1} dbar` is invariant under
+nonsingular linear changes of parameter coordinates.
 
 ## Start here
 
@@ -34,8 +44,22 @@ Two further checks, also seconds:
 
 ```sh
 python scripts/verify_k1.py                  # 12 claim-level checks over results/
-python -m unittest discover -s tests         # 27 unit and regression tests
+python -m unittest discover -s tests         # 30 unit and regression tests
 ```
+
+## Checks added for the revised manuscript
+
+```sh
+python -m unittest discover -s tests -p test_wald_consequence.py -v
+```
+
+These three tests independently integrate oracle and feasible influence-function
+covariances for uniform noise on `[-1, 1]` with the score basis `{e, e^3}`.
+They check the single inflated eigenvalue governing the joint Wald limit, the
+contrast variance and direction of coverage loss, and invariance under a linear
+change of parameter coordinates. Cases include an additive intercept, a zero mean
+gradient, and a scalar parameter. These are deterministic checks of the asymptotic
+formulas, not new Monte Carlo experiments or finite-sample coverage validation.
 
 ## Layout
 
@@ -55,6 +79,7 @@ python -m unittest discover -s tests         # 27 unit and regression tests
 | `results/` | stored results of every run cited by the manuscript, with metadata (seeds, replications) |
 | `output/` | tables and figures regenerated from `results/` |
 | `tests/` | unit tests and regression tests on the stored results |
+| `tests/test_wald_consequence.py` | independent quadrature checks of Corollary 8 |
 
 The prefix `k1_` is the internal code of this article; it is kept because the metadata
 files in `results/` refer to the scripts by these names.
